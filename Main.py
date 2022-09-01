@@ -96,7 +96,7 @@ class DoublyCircularLinkedList:
             return -1
         curr_node = self.head
         for ind in range(index):
-            curr_node = curr_node.nex
+            curr_node = curr_node.next
         return [curr_node.previous.data, curr_node.next.data]
         
 
