@@ -1,12 +1,12 @@
 class Node:
-    def _init_(self, data=None):
+    def __init__(self, data=None):
         self.data = data
         self.previous = self
         self.next = self
 
 
 class DoublyCircularLinkedList:
-    def _init_(self):
+    def __init__(self):
         self.count = 0
         self.front = None
         self.end = None
@@ -127,4 +127,12 @@ for i in range(len(operations)):
     elif operations[i] == "add_at_tail":
         result.append(obj.add_at_tail(data[i]))
     elif operations[i] == "add_at_index":
-        result.appe…
+        result.append(obj.add_at_index(int(data[i][0]), data[i][1]))
+    elif operations[i] == "get":
+        result.append(obj.get(data[i]))
+    elif operations[i] == "get_previous_next":
+        result.append(obj.get_previous_next(data[i]))
+    elif operations[i] == 'delete_at_index':
+        result.append(obj.delete_at_index(data[i]))
+
+print(result)
